@@ -1,0 +1,2 @@
+module EntersoftsHelper
+end

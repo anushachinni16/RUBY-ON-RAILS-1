@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Entersofts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Fullname</th>
+      <th>Fathername</th>
+      <th>Email</th>
+      <th>Mobilenumber</th>
+      <th>Location</th>
+      <th>Areureadytorelocate</th>
+      <th>Btechpercentage</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @entersofts.each do |entersoft| %>
+      <tr>
+        <td><%= entersoft.fullname %></td>
+        <td><%= entersoft.fathername %></td>
+        <td><%= entersoft.email %></td>
+        <td><%= entersoft.mobilenumber %></td>
+        <td><%= entersoft.location %></td>
+        <td><%= entersoft.areureadytorelocate %></td>
+        <td><%= entersoft.btechpercentage %></td>
+        <td><%= link_to 'Show', entersoft %></td>
+        <td><%= link_to 'Edit', edit_entersoft_path(entersoft) %></td>
+        <td><%= link_to 'Destroy', entersoft, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Entersoft', new_entersoft_path %>
